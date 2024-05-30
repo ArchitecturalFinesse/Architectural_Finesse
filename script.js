@@ -1,9 +1,24 @@
 function openPopup(id) {
-    document.getElementById(id).style.display = 'flex';
+    // Cerrar todos los pop-ups abiertos
+    closeAllPopups();
+    
+    // Abrir el pop-up especificado
+    document.getElementById(id).style.display = 'block';
 }
 
 function closePopup(id) {
+    // Cerrar el pop-up especificado
     document.getElementById(id).style.display = 'none';
+}
+
+function closeAllPopups() {
+    // Obtener todos los elementos con la clase "popup"
+    var popups = document.getElementsByClassName('popup');
+
+    // Cerrar todos los pop-ups
+    for (var i = 0; i < popups.length; i++) {
+        popups[i].style.display = 'none';
+    }
 }
 
 document.getElementById('estimate-form').addEventListener('submit', function(event) {
