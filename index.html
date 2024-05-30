@@ -4,62 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architectural Finesse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init(yvbeLgm4MGWDlW8Tp);
+            emailjs.init("yvbeLgm4MGWDlW8Tp"); // Reemplaza "yvbeLgm4MGWDlW8Tp" con tu Public Key de EmailJS
         })();
     </script>
-    <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Architectural Finesse</h1>
-        </div>
-    </header>
-
-    <div class="buttons-container">
-        <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
+    <div class="container">
+        <button class="btn" onclick="openPopup('about-popup')">About Us</button>
         <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
         <button class="btn" onclick="openPopup('contact-popup')">Contact Us</button>
         <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
     </div>
 
-    <!-- About Us Popup -->
-    <div id="about-us-popup" class="popup" style="display: none;">
+    <div id="about-popup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup('about-us-popup')">&times;</span>
+            <span class="close" onclick="closePopup('about-popup')">&times;</span>
             <h2>About Us</h2>
-            <p>Architectural Finesse specializes in high-quality wall textures imported from Italy. Our team is dedicated to providing unique and elegant solutions to enhance the aesthetic appeal of any space. With years of experience in the industry, we ensure the best quality products and excellent customer service.</p>
-            <p>We are passionate about transforming ordinary walls into extraordinary works of art. Our textures are not only beautiful but also durable and easy to maintain. Whether you are looking for a subtle finish or a bold statement, we have the perfect texture for your needs.</p>
-            <p>Contact us today to learn more about our products and how we can help you achieve your design goals.</p>
+            <p>Architectural Finesse specializes in wall textures with products from Italy. Our aim is to bring elegance and style to your spaces.</p>
         </div>
     </div>
 
-    <!-- Estimate Popup -->
-    <div id="estimate-popup" class="popup" style="display: none;">
+    <div id="estimate-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
             <h2>Request Estimate</h2>
-            <form id="estimate-form">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="municipality">Municipality:</label>
-                    <select id="municipality" name="municipality" required>
+            <form id="estimate-form" onsubmit="sendEstimate(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="municipality">Municipality:</label>
+                <select id="municipality" name="municipality" required>
                         <option value="">Select Municipality</option>
                         <option value="">Select Municipality</option>
                         <option value="Adjuntas">Adjuntas</option>
@@ -147,28 +128,24 @@
         </div>
     </div>
 
-    <!-- Contact Popup -->
-    <div id="contact-popup" class="popup" style="display: none;">
+    <div id="contact-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
             <h2>Contact Us</h2>
-            <div class="contact-links">
-                <a href="https://wa.me/19393212967" class="contact-link">WhatsApp</a>
-                <a href="https://www.instagram.com/architectural_finesse" class="contact-link">Instagram</a>
-            </div>
+            <p>Contact us through the following channels:</p>
+            <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse?igsh=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
         </div>
     </div>
 
-    <!-- Catalog Popup -->
-    <div id="catalog-popup" class="popup" style="display: none;">
+    <div id="catalog-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
             <h2>Catalog</h2>
-            <p>Here you can download our catalog:</p>
-            <a href="path/to/catalog1.pdf" class="catalog-link">Catalog 1</a>
-            <a href="path/to/catalog2.pdf" class="catalog-link">Catalog 2</a>
+            <p>Our catalogs are available upon request. Please contact us to receive the latest catalogs.</p>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
