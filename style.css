@@ -1,126 +1,63 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E0E0E0; /* Gris cemento */
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.buttons-container {
+    font-family: Arial, sans-serif;
+    background-color: #D3D3D3; /* Gris cemento */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
 }
 
 .btn {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    border-radius: 25px; /* Botones ovalados */
-    padding: 15px 30px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
     margin: 10px;
-    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #ddd;
 }
 
 .popup {
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .popup-content {
-    background-color: #fff;
+    background-color: white;
+    margin: 15% auto;
     padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    text-align: left;
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 25px;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.btn-submit {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-submit:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-link {
-    margin: 10px 0;
+.close:hover,
+.close:focus {
+    color: red;
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-.contact-link:hover {
-    color: #000;
-}
-
-.catalog-link {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-.catalog-link:hover {
-    color: #000;
+    cursor: pointer;
 }
