@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -20,16 +20,19 @@ body {
 .btn {
     width: 100%;
     padding: 20px;
-    background-color: white;
-    border: 2px solid #000;
-    border-radius: 20px;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #ddd;
+    background: linear-gradient(to right, #ff6a7a, #ff708e);
+    transform: scale(1.05);
 }
 
 .popup {
@@ -49,10 +52,11 @@ body {
     background-color: white;
     padding: 20px;
     border: 2px solid #000;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 90%;
     max-width: 500px;
     position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .popup .close {
@@ -73,20 +77,43 @@ form input, form select, form button {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 form button {
-    background-color: #000;
+    background-color: #4CAF50;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #444;
+    background-color: #45a049;
 }
 
 .large-popup {
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
+}
+
+#contact-popup .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-popup .popup-content p {
+    font-size: 18px;
+}
+
+#contact-popup .popup-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#contact-popup .popup-content a:hover {
+    text-decoration: underline;
 }
