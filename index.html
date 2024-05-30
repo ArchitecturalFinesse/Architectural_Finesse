@@ -12,33 +12,27 @@
         <div class="container">
             <h1>Architectural Finesse</h1>
             <nav>
-                <button class="btn" onclick="scrollToSection('about-us')">About Us</button>
-                <button class="btn" onclick="openPopup()">Request Estimate</button>
+                <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
+                <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
                 <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
-                <button class="btn" onclick="scrollToSection('catalog')">Catalog</button>
+                <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
             </nav>
         </div>
     </header>
-    <section id="about-us">
-        <div class="content">
+    
+    <!-- About Us Popup -->
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('about-us-popup')">&times;</span>
             <h2>About Us</h2>
             <p>Architectural Finesse specializes in wall textures, offering high-quality products from Italy.</p>
         </div>
-    </section>
-    <section id="catalog">
-        <div class="content">
-            <h2>Catalog</h2>
-            <p>You can request our complete catalog via email or WhatsApp. Contact us for more details on our exclusive textures and products.</p>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 Architectural Finesse</p>
-    </footer>
+    </div>
 
-    <!-- Popup Form -->
-    <div id="popup" class="popup">
+    <!-- Estimate Popup -->
+    <div id="estimate-popup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
+            <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
             <h2>Request Estimate</h2>
             <form id="estimate-form">
                 <label for="name">Full Name:</label>
@@ -64,24 +58,33 @@
         </div>
     </div>
 
+    <!-- Catalog Popup -->
+    <div id="catalog-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
+            <h2>Catalog</h2>
+            <p>You can request our complete catalog via email or WhatsApp. Contact us for more details on our exclusive textures and products.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Architectural Finesse</p>
+    </footer>
+
     <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        function openPopup(id) {
+            document.getElementById(id).style.display = 'block';
         }
 
-        function openPopup() {
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
+        function closePopup(id) {
+            document.getElementById(id).style.display = 'none';
         }
 
         document.getElementById('estimate-form').addEventListener('submit', function(e) {
             e.preventDefault();
             // Here you can add the logic to send the form data to your email
             alert('Form submitted!');
-            closePopup();
+            closePopup('estimate-popup');
         });
     </script>
 </body>
