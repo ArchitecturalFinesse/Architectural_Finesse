@@ -12,6 +12,7 @@
             emailjs.init("YOUR_USER_ID");
         })();
     </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -59,6 +60,7 @@
                 <div class="form-group">
                     <label for="municipality">Municipality:</label>
                     <select id="municipality" name="municipality" required>
+                        <option value="">Select Municipality</option>
                         <option value="">Select Municipality</option>
                         <option value="Adjuntas">Adjuntas</option>
                         <option value="Aguada">Aguada</option>
@@ -152,24 +154,21 @@
             <h2>Contact Us</h2>
             <div class="contact-links">
                 <a href="https://wa.me/19393212967" class="contact-link">WhatsApp</a>
-                <a href="https://www.instagram.com/architectural_finesse” class=“contact-link”>Instagram
-
-
-
-
-<!-- Catalog Popup -->
-<div id="catalog-popup" class="popup" style="display: none;">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
-        <h2>Catalog</h2>
-        <p>Here you can download our catalog:</p>
-        <a href="path/to/catalog1.pdf" class="catalog-link">Catalog 1</a>
-        <a href="path/to/catalog2.pdf" class="catalog-link">Catalog 2</a>
+                <a href="https://www.instagram.com/architectural_finesse" class="contact-link">Instagram</a>
+            </div>
+        </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <!-- Catalog Popup -->
+    <div id="catalog-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
+            <h2>Catalog</h2>
+            <p>Here you can download our catalog:</p>
+            <a href="path/to/catalog1.pdf" class="catalog-link">Catalog 1</a>
+            <a href="path/to/catalog2.pdf" class="catalog-link">Catalog 2</a>
+        </div>
+    </div>
 
 </body>
 </html>
-            
