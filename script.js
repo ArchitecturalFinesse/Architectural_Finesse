@@ -1,6 +1,6 @@
 function openPopup(id) {
     var popup = document.getElementById(id);
-    popup.style.display = "block";
+    popup.style.display = "flex"; // Use flex to center the content
 }
 
 function closePopup(id) {
