@@ -1,6 +1,6 @@
 function openPopup(id) {
     var popup = document.getElementById(id);
-    popup.style.display = "flex"; // Use flex to center the content
+    popup.style.display = "flex";
 }
 
 function closePopup(id) {
@@ -17,5 +17,5 @@ function sendEstimate(event) {
     emailjs.sendForm("service_n8ims0n", "template_ho197gd", formData)
         .then(function(response) {
             console.log("Email sent successfully:", response);
-            alert("¡Tu solicitud de estimación ha sido enviada exitosamente!");
-            form.reset
+            alert("Su solicitud de estimación ha sido enviada exitosamente!");
+            form.reset(); // Reset the form after
