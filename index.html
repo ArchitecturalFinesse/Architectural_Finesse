@@ -6,6 +6,12 @@
     <title>Architectural Finesse</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID");
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -17,7 +23,7 @@
     <div class="buttons-container">
         <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
         <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
-        <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
+        <button class="btn" onclick="openPopup('contact-popup')">Contact Us</button>
         <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
     </div>
 
@@ -26,7 +32,9 @@
         <div class="popup-content">
             <span class="close" onclick="closePopup('about-us-popup')">&times;</span>
             <h2>About Us</h2>
-            <p>Architectural Finesse specializes in wall textures, offering high-quality products from Italy.</p>
+            <p>Architectural Finesse specializes in high-quality wall textures imported from Italy. Our team is dedicated to providing unique and elegant solutions to enhance the aesthetic appeal of any space. With years of experience in the industry, we ensure the best quality products and excellent customer service.</p>
+            <p>We are passionate about transforming ordinary walls into extraordinary works of art. Our textures are not only beautiful but also durable and easy to maintain. Whether you are looking for a subtle finish or a bold statement, we have the perfect texture for your needs.</p>
+            <p>Contact us today to learn more about our products and how we can help you achieve your design goals.</p>
         </div>
     </div>
 
@@ -52,10 +60,84 @@
                     <label for="municipality">Municipality:</label>
                     <select id="municipality" name="municipality" required>
                         <option value="">Select Municipality</option>
-                        <option value="San Juan">San Juan</option>
+                        <option value="Adjuntas">Adjuntas</option>
+                        <option value="Aguada">Aguada</option>
+                        <option value="Aguadilla">Aguadilla</option>
+                        <option value="Aguas Buenas">Aguas Buenas</option>
+                        <option value="Aibonito">Aibonito</option>
+                        <option value="Arecibo">Arecibo</option>
+                        <option value="Arroyo">Arroyo</option>
+                        <option value="Añasco">Añasco</option>
+                        <option value="Barceloneta">Barceloneta</option>
+                        <option value="Barranquitas">Barranquitas</option>
                         <option value="Bayamón">Bayamón</option>
+                        <option value="Cabo Rojo">Cabo Rojo</option>
+                        <option value="Caguas">Caguas</option>
+                        <option value="Camuy">Camuy</option>
+                        <option value="Canóvanas">Canóvanas</option>
                         <option value="Carolina">Carolina</option>
-                        <!-- Add more municipalities as needed -->
+                        <option value="Cataño">Cataño</option>
+                        <option value="Cayey">Cayey</option>
+                        <option value="Ceiba">Ceiba</option>
+                        <option value="Ciales">Ciales</option>
+                        <option value="Cidra">Cidra</option>
+                        <option value="Coamo">Coamo</option>
+                        <option value="Comerío">Comerío</option>
+                        <option value="Corozal">Corozal</option>
+                        <option value="Culebra">Culebra</option>
+                        <option value="Dorado">Dorado</option>
+                        <option value="Fajardo">Fajardo</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Guayama">Guayama</option>
+                        <option value="Guayanilla">Guayanilla</option>
+                        <option value="Guaynabo">Guaynabo</option>
+                        <option value="Gurabo">Gurabo</option>
+                        <option value="Guánica">Guánica</option>
+                        <option value="Hatillo">Hatillo</option>
+                        <option value="Hormigueros">Hormigueros</option>
+                        <option value="Humacao">Humacao</option>
+                        <option value="Isabela">Isabela</option>
+                        <option value="Jayuya">Jayuya</option>
+                        <option value="Juana Díaz">Juana Díaz</option>
+                        <option value="Juncos">Juncos</option>
+                        <option value="Lajas">Lajas</option>
+                        <option value="Lares">Lares</option>
+                        <option value="Las Marías">Las Marías</option>
+                        <option value="Las Piedras">Las Piedras</option>
+                        <option value="Loíza">Loíza</option>
+                        <option value="Luquillo">Luquillo</option>
+                        <option value="Manatí">Manatí</option>
+                        <option value="Maricao">Maricao</option>
+                        <option value="Maunabo">Maunabo</option>
+                        <option value="Mayagüez">Mayagüez</option>
+                        <option value="Moca">Moca</option>
+                        <option value="Morovis">Morovis</option>
+                        <option value="Naguabo">Naguabo</option>
+                        <option value="Naranjito">Naranjito</option>
+                        <option value="Orocovis">Orocovis</option>
+                        <option value="Patillas">Patillas</option>
+                        <option value="Peñuelas">Peñuelas</option>
+                        <option value="Ponce">Ponce</option>
+                        <option value="Quebradillas">Quebradillas</option>
+                        <option value="Rincón">Rincón</option>
+                        <option value="Río Grande">Río Grande</option>
+                        <option value="Sabana Grande">Sabana Grande</option>
+                        <option value="Salinas">Salinas</option>
+                        <option value="San Germán">San Germán</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="San Lorenzo">San Lorenzo</option>
+                        <option value="San Sebastián">San Sebastián</option>
+                        <option value="Santa Isabel">Santa Isabel</option>
+                        <option value="Toa Alta">Toa Alta</option>
+                        <option value="Toa Baja">Toa Baja</option>
+                        <option value="Trujillo Alto">Trujillo Alto</option>
+                        <option value="Utuado">Utuado</option>
+                        <option value="Vega Alta">Vega Alta</option>
+                        <option value="Vega Baja">Vega Baja</option>
+                        <option value="Vieques">Vieques</option>
+                        <option value="Villalba">Villalba</option>
+                        <option value="Yabucoa">Yabucoa</option>
+                        <option value="Yauco">Yauco</option>
                     </select>
                 </div>
                 <button type="submit" class="btn-submit">Submit</button>
@@ -63,40 +145,11 @@
         </div>
     </div>
 
-    <!-- Catalog Popup -->
-    <div id="catalog-popup" class="popup" style="display: none;">
+    <!-- Contact Popup -->
+    <div id="contact-popup" class="popup" style="display: none;">
         <div class="popup-content">
-            <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
-            <h2>Catalog</h2>
-            <p>You can request our complete catalog via email or WhatsApp. Contact us for more details on our exclusive textures and products.</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Architectural Finesse</p>
-    </footer>
-
-    <script>
-        function openPopup(id) {
-            // Close all popups
-            var popups = document.getElementsByClassName('popup');
-            for (var i = 0; i < popups.length; i++) {
-                popups[i].style.display = 'none';
-            }
-            // Open the requested popup
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function closePopup(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        document.getElementById('estimate-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you can add the logic to send the form data to your email
-            alert('Form submitted!');
-            closePopup('estimate-popup');
-        });
-    </script>
-</body>
-</html>
+            <span class="close" onclick="closePopup('contact-popup')">&times;</span>
+            <h2>Contact Us</h2>
+            <div class="contact-links">
+                <a href="https://wa.me/19393212967" class="contact-link">WhatsApp</a>
+                <a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwy
