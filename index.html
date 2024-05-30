@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architectural Finesse</title>
+    <title>Finesse Arquitectónica</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -13,42 +13,46 @@
     </script>
 </head>
 <body>
+    <div class="language-switcher">
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
     <div class="container">
-        <button class="btn" onclick="openPopup('about-popup')">ℹ️ About Us</button>
-        <button class="btn" onclick="openPopup('estimate-popup')">📝 Request Estimate</button>
-        <button class="btn" onclick="openPopup('contact-popup')">📞 Contact Us</button>
-        <button class="btn" onclick="openPopup('catalog-popup')">📚 Catalog</button>
+        <button class="btn" onclick="openPopup('about-popup')">ℹ️ <span data-lang="about-us">Sobre Nosotros</span></button>
+        <button class="btn" onclick="openPopup('estimate-popup')">📝 <span data-lang="request-estimate">Solicitar Estimación</span></button>
+        <button class="btn" onclick="openPopup('contact-popup')">📞 <span data-lang="contact-us">Contáctenos</span></button>
+        <button class="btn" onclick="openPopup('catalog-popup')">📚 <span data-lang="catalog">Catálogo</span></button>
     </div>
 
     <div id="about-popup" class="popup">
         <div class="popup-content large-popup">
             <span class="close" onclick="closePopup('about-popup')">&times;</span>
-            <h2>Sobre Nosotros</h2>
-            <p>En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
-            <p>Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.</p>
-            <p>Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.</p>
+            <h2 data-lang="about-title">Sobre Nosotros</h2>
+            <p data-lang="about-text1">En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
+            <p data-lang="about-text2">Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.</p>
+            <p data-lang="about-text3">Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.</p>
         </div>
     </div>
 
     <div id="estimate-popup" class="popup">
         <div class="popup-content large-popup">
             <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
-            <h2>Request Estimate</h2>
+            <h2 data-lang="estimate-title">Solicitar Estimación</h2>
             <form id="estimate-form" onsubmit="sendEstimate(event)">
-                <label for="name">Full Name:</label>
+                <label for="name" data-lang="label-name">Nombre Completo:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
+                <label for="email" data-lang="label-email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="phone">Phone Number:</label>
+                <label for="phone" data-lang="label-phone">Número de Teléfono:</label>
                 <input type="tel" id="phone" name="phone" required>
-                <label for="municipality">Municipality:</label>
+                <label for="municipality" data-lang="label-municipality">Municipio:</label>
                 <select id="municipality" name="municipality" required>
-                    <option value="North">North</option>
-                    <option value="South">South</option>
-                    <option value="West">West</option>
-                    <option value="East">East</option>
+                    <option value="North">Norte</option>
+                    <option value="South">Sur</option>
+                    <option value="West">Oeste</option>
+                    <option value="East">Este</option>
                 </select>
-                <button type="submit">Submit</button>
+                <button type="submit" data-lang="submit">Enviar</button>
             </form>
         </div>
     </div>
@@ -56,19 +60,19 @@
     <div id="contact-popup" class="popup">
         <div class="popup-content large-popup">
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
-            <h2>Contact Us</h2>
-            <p>Contact us through the following channels:</p>
-            <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
-            <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
-            <p><a href="mailto:info@architecturalfinesse.com">Email</a></p>
+            <h2 data-lang="contact-title">Contáctenos</h2>
+            <p data-lang="contact-text">Contáctenos a través de los siguientes canales:</p>
+            <p><a href="https://wa.me/19393212967" target="_blank" data-lang="whatsapp">WhatsApp</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank" data-lang="instagram">Instagram</a></p>
+            <p><a href="mailto:info@architecturalfinesse.com" data-lang="email">Correo Electrónico</a></p>
         </div>
     </div>
 
     <div id="catalog-popup" class="popup">
         <div class="popup-content large-popup">
             <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
-            <h2>Catalog</h2>
-            <p>Our catalogs are available upon request. Please contact us to receive the latest catalogs.</p>
+            <h2 data-lang="catalog-title">Catálogo</h2>
+            <p data-lang="catalog-text">Nuestros catálogos están disponibles a pedido. Por favor contáctenos para recibir los catálogos más recientes.</p>
         </div>
     </div>
 
