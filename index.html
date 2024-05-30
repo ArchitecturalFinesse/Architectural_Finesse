@@ -1,41 +1,102 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #e0e0e0; /* Gris más claro */
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Finesse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Architectural Finesse</h1>
+        </div>
+    </header>
 
-header {
-    background-color: #333; /* Gris oscuro */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <div class="buttons-container">
+        <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
+        <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
+        <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
+        <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
+    </div>
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    text-transform: uppercase;
-}
+    <!-- About Us Popup -->
+    <div id="about-us-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('about-us-popup')">&times;</span>
+            <h2>About Us</h2>
+            <p>Architectural Finesse specializes in wall textures, offering high-quality products from Italy.</p>
+        </div>
+    </div>
 
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
+    <!-- Estimate Popup -->
+    <div id="estimate-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
+            <h2>Request Estimate</h2>
+            <form id="estimate-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="municipality">Municipality:</label>
+                    <select id="municipality" name="municipality" required>
+                        <option value="">Select Municipality</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="Bayamón">Bayamón</option>
+                        <option value="Carolina">Carolina</option>
+                        <!-- Add more municipalities as needed -->
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
+    <!-- Catalog Popup -->
+    <div id="catalog-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
+            <h2>Catalog</h2>
+            <p>You can request our complete catalog via email or WhatsApp. Contact us for more details on our exclusive textures and products.</p>
+        </div>
+    </div>
 
-.btn {
-    font-size: 1.2em;
-    padding: 15px 30px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5
+    <footer>
+        <p>&copy; 2024 Architectural Finesse</p>
+    </footer>
+
+    <script>
+        function openPopup(id) {
+            // Close all popups
+            var popups = document.getElementsByClassName('popup');
+            for (var i = 0; i < popups.length; i++) {
+                popups[i].style.display = 'none';
+            }
+            // Open the requested popup
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        document.getElementById('estimate-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you can add the logic to send the form data to your email
+            alert('Form submitted!');
+            closePopup('estimate-popup');
+        });
+    </script>
+</body>
+</html>
