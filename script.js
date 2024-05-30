@@ -17,5 +17,4 @@ function sendEstimate(event) {
     emailjs.sendForm("service_n8ims0n", "template_ho197gd", formData)
         .then(function(response) {
             console.log("Email sent successfully:", response);
-            alert("Su solicitud de estimación ha sido enviada exitosamente!");
-            form.reset(); // Reset the form after
+            alert("Su solicitud de estimación ha sido enviada exitosamente
