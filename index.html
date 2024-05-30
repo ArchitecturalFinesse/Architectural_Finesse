@@ -13,7 +13,7 @@
             <h1>Architectural Finesse</h1>
             <nav>
                 <button class="btn" onclick="scrollToSection('about-us')">About Us</button>
-                <button class="btn" onclick="window.location.href='mailto:archifinesseco@gmail.com?subject=Estimate'">Request Estimate</button>
+                <button class="btn" onclick="openPopup()">Request Estimate</button>
                 <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
                 <button class="btn" onclick="scrollToSection('catalog')">Catalog</button>
             </nav>
@@ -34,10 +34,55 @@
     <footer>
         <p>&copy; 2024 Architectural Finesse</p>
     </footer>
+
+    <!-- Popup Form -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Request Estimate</h2>
+            <form id="estimate-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="municipality">Municipality:</label>
+                <select id="municipality" name="municipality" required>
+                    <option value="">Select Municipality</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="Bayamón">Bayamón</option>
+                    <option value="Carolina">Carolina</option>
+                    <!-- Add more municipalities as needed -->
+                </select>
+                
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <script>
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
+
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.getElementById('estimate-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you can add the logic to send the form data to your email
+            alert('Form submitted!');
+            closePopup();
+        });
     </script>
 </body>
 </html>
