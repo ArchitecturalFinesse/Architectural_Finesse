@@ -73,6 +73,12 @@
 
     <script>
         function openPopup(id) {
+            // Close all popups
+            var popups = document.getElementsByClassName('popup');
+            for (var i = 0; i < popups.length; i++) {
+                popups[i].style.display = 'none';
+            }
+            // Open the requested popup
             document.getElementById(id).style.display = 'block';
         }
 
