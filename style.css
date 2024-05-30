@@ -10,6 +10,7 @@ body {
 
 .container {
     text-align: center;
+    margin-top: 50px; /* Ajusta el margen superior para centrar los botones */
 }
 
 .btn {
@@ -28,7 +29,7 @@ body {
 }
 
 .popup {
-    display: none;
+    display: none; /* Oculta los pop-ups por defecto */
     position: fixed;
     z-index: 1;
     left: 0;
