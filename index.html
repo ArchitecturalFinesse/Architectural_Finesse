@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finesse Arquitectónica</title>
+    <title>Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -13,19 +13,27 @@
     </script>
 </head>
 <body>
-    <div class="language-switcher">
-        <button onclick="setLanguage('es')">Español</button>
-        <button onclick="setLanguage('en')">English</button>
-    </div>
+    <header>
+        <img src="logo.png" alt="Architectural Finesse Logo" class="logo">
+        <div class="header-text">
+            <h1>Architectural Finesse</h1>
+            <p>Transformando Espacios con Elegancia y Lujo</p>
+        </div>
+        <div class="language-switcher">
+            <button onclick="setLanguage('es')">Español</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+    </header>
+
     <div class="container">
-        <button class="btn" onclick="openPopup('about-popup')">ℹ️ <span data-lang="about-us">Sobre Nosotros</span></button>
-        <button class="btn" onclick="openPopup('estimate-popup')">📝 <span data-lang="request-estimate">Solicitar Estimación</span></button>
-        <button class="btn" onclick="openPopup('contact-popup')">📞 <span data-lang="contact-us">Contáctenos</span></button>
-        <button class="btn" onclick="openPopup('catalog-popup')">📚 <span data-lang="catalog">Catálogo</span></button>
+        <button class="btn" onclick="openPopup('about-popup')" data-lang="about-us">Sobre Nosotros</button>
+        <button class="btn" onclick="openPopup('estimate-popup')" data-lang="request-estimate">Solicitar Estimación</button>
+        <button class="btn" onclick="openPopup('contact-popup')" data-lang="contact-us">Contáctenos</button>
+        <button class="btn" onclick="openPopup('catalog-popup')" data-lang="catalog">Catálogo</button>
     </div>
 
     <div id="about-popup" class="popup">
-        <div class="popup-content large-popup">
+        <div class="popup-content">
             <span class="close" onclick="closePopup('about-popup')">&times;</span>
             <h2 data-lang="about-title">Sobre Nosotros</h2>
             <p data-lang="about-text1">En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
@@ -35,7 +43,7 @@
     </div>
 
     <div id="estimate-popup" class="popup">
-        <div class="popup-content large-popup">
+        <div class="popup-content">
             <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
             <h2 data-lang="estimate-title">Solicitar Estimación</h2>
             <form id="estimate-form" onsubmit="sendEstimate(event)">
@@ -47,10 +55,10 @@
                 <input type="tel" id="phone" name="phone" required>
                 <label for="municipality" data-lang="label-municipality">Municipio:</label>
                 <select id="municipality" name="municipality" required>
-                    <option value="North">Norte</option>
-                    <option value="South">Sur</option>
-                    <option value="West">Oeste</option>
-                    <option value="East">Este</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Sur">Sur</option>
+                    <option value="Este">Este</option>
+                    <option value="Oeste">Oeste</option>
                 </select>
                 <button type="submit" data-lang="submit">Enviar</button>
             </form>
@@ -58,18 +66,18 @@
     </div>
 
     <div id="contact-popup" class="popup">
-        <div class="popup-content large-popup">
+        <div class="popup-content">
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
             <h2 data-lang="contact-title">Contáctenos</h2>
             <p data-lang="contact-text">Contáctenos a través de los siguientes canales:</p>
-            <p><a href="https://wa.me/19393212967" target="_blank" data-lang="whatsapp">WhatsApp</a></p>
-            <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank" data-lang="instagram">Instagram</a></p>
-            <p><a href="mailto:info@architecturalfinesse.com" data-lang="email">Correo Electrónico</a></p>
+            <p><a href="https://wa.me/19393212967" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse?igsh=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank"><img src="instagram-icon.png" alt="Instagram"> Instagram</a></p>
+            <p><a href="mailto:info@architecturalfinesse.com"><img src="email-icon.png" alt="Email"> Correo Electrónico</a></p>
         </div>
     </div>
 
     <div id="catalog-popup" class="popup">
-        <div class="popup-content large-popup">
+        <div class="popup-content">
             <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
             <h2 data-lang="catalog-title">Catálogo</h2>
             <p data-lang="catalog-text">Nuestros catálogos están disponibles a pedido. Por favor contáctenos para recibir los catálogos más recientes.</p>
