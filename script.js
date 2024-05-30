@@ -31,7 +31,7 @@ document.getElementById('estimate-form').addEventListener('submit', function(eve
     const municipality = document.getElementById('municipality').value;
 
     // Enviar correo
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    emailjs.send(yvbeLgm4MGWDlW8Tp, template_ho197gd, {
         from_name: name,
         from_email: email,
         from_phone: phone,
