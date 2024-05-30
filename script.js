@@ -1,28 +1,27 @@
-function openPopup(popupId) {
-    document.getElementById(popupId).style.display = 'block';
+function openPopup(id) {
+    var popup = document.getElementById(id);
+    popup.style.display = "block";
 }
 
-function closePopup(popupId) {
-    document.getElementById(popupId).style.display = 'none';
+function closePopup(id) {
+    var popup = document.getElementById(id);
+    popup.style.display = "none";
 }
 
 function sendEstimate(event) {
     event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const municipality = document.getElementById('municipality').value;
-
-    emailjs.send("service_n8ims0n", "template_ho197gd", {
-        from_name: name,
-        from_email: email,
-        from_phone: phone,
-        municipality: municipality
-    }).then(function(response) {
-        alert("Estimate request sent successfully!");
-        closePopup('estimate-popup');
-    }, function(error) {
-        alert("There was an error sending the estimate request. Please try again.");
-    });
+    
+    var form = document.getElementById("estimate-form");
+    var formData = new FormData(form);
+    
+    emailjs.sendForm("service_n8ims0n", "template_ho197gd", formData)
+        .then(function(response) {
+            console.log("Email sent successfully:", response);
+            alert("Your estimate request has been sent successfully!");
+            form.reset(); // Reset the form after submission
+            closePopup("estimate-popup"); // Close the estimate popup after submission
+        }, function(error) {
+            console.error("Email sending failed:", error);
+            alert("Oops! Something went wrong. Please try again later.");
+        });
 }
