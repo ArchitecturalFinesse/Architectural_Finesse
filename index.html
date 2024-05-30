@@ -11,14 +11,15 @@
     <header>
         <div class="container">
             <h1>Architectural Finesse</h1>
-            <nav>
-                <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
-                <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
-                <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
-                <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
-            </nav>
         </div>
     </header>
+
+    <div class="buttons-container">
+        <button class="btn" onclick="openPopup('about-us-popup')">About Us</button>
+        <button class="btn" onclick="openPopup('estimate-popup')">Request Estimate</button>
+        <button class="btn" onclick="window.location.href='https://wa.me/19393212967?text=Hello, I would like more information.'">Contact Us</button>
+        <button class="btn" onclick="openPopup('catalog-popup')">Catalog</button>
+    </div>
 
     <!-- About Us Popup -->
     <div id="about-us-popup" class="popup">
