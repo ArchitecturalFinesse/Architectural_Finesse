@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("yvbeLgm4MGWDlW8Tp"); // Tu Public Key de EmailJS
-        })();
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Architectural Finesse</h1>
-        <div class="language-switch">
-            <button onclick="switchLanguage('es')">ES</button>
-            <button onclick="switchLanguage('en')">EN</button>
-        </div>
+        <button id="spanish-btn">Español</button>
+        <button id="english-btn">English</button>
     </header>
     <div class="container">
-        <button class="profile-btn" id="texture-btn" onclick="window.location.href='textura_en_paredes.html'">Textura en Paredes</button>
-        <button class="profile-btn" id="ceiling-btn" onclick="window.location.href='stretch_ceiling.html'">Stretch Ceiling</button>
+        <button class="profile-btn" onclick="location.href='textura_en_paredes.html'">Textura en Paredes</button>
+        <button class="profile-btn" onclick="location.href='stretch_ceiling.html'">Stretch Ceiling</button>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
