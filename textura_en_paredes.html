@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Textura en Paredes - Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("yvbeLgm4MGWDlW8Tp"); // Tu Public Key de EmailJS
+        })();
+    </script>
 </head>
 <body>
     <header>
-        <h1>Textura en Paredes</h1>
+        <img src="img/logo.png" alt="Logo de Architectural Finesse">
+        <h1>Architectural Finesse</h1>
+        <div class="language-switch">
+            <button onclick="switchLanguage('es')">ES</button>
+            <button onclick="switchLanguage('en')">EN</button>
+        </div>
     </header>
     <div class="container">
         <button class="btn" onclick="openPopup('about-popup')">Sobre Nosotros</button>
-        <button class="btn" onclick="openPopup('estimate-popup')">Estimado</button>
-        <button class="btn" onclick="openPopup('contact-popup')">Contáctanos</button>
+        <button class="btn" onclick="openPopup('estimate-popup')">Solicitar Estimado</button>
+        <button class="btn" onclick="openPopup('contact-popup')">Contáctenos</button>
         <button class="btn" onclick="openPopup('catalog-popup')">Catálogos</button>
     </div>
 
@@ -22,9 +32,7 @@
         <div class="popup-content">
             <span class="close" onclick="closePopup('about-popup')">&times;</span>
             <h2>Sobre Nosotros</h2>
-            <p>En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
-            <p>Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.</p>
-            <p>Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.</p>
+            <p>En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo...</p>
         </div>
     </div>
 
@@ -35,7 +43,7 @@
             <form id="estimate-form" onsubmit="sendEstimate(event)">
                 <label for="name">Nombre Completo:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">Correo Electrónico:</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="phone">Teléfono:</label>
                 <input type="tel" id="phone" name="phone" required>
@@ -46,6 +54,27 @@
                     <option value="Este">Este</option>
                     <option value="Oeste">Oeste</option>
                 </select>
+                <label for="product">Producto:</label>
+                <select id="product" name="product" required onchange="toggleSharkiOptions()">
+                    <option value="Dorotea">Dorotea</option>
+                    <option value="Velluto Fiorentino">Velluto Fiorentino</option>
+                    <option value="Vanesia">Vanesia</option>
+                    <option value="Montenapoleone">Montenapoleone</option>
+                    <option value="Seta D’ Autore">Seta D’ Autore</option>
+                    <option value="Infinito">Infinito</option>
+                    <option value="Volare">Volare</option>
+                    <option value="Lava Venetian Plaster">Lava Venetian Plaster</option>
+                    <option value="Sharki">Sharki</option>
+                </select>
+                <div id="sharki-options" style="display: none;">
+                    <label for="sharki-type">Tipo de Sharki:</label>
+                    <select id="sharki-type" name="sharki-type">
+                        <option value="Sharki Gold">Sharki Gold</option>
+                        <option value="Sharki Gold Diamond">Sharki Gold Diamond</option>
+                        <option value="Sharki Silver">Sharki Silver</option>
+                        <option value="Sharki Silver Diamond">Sharki Silver Diamond</option>
+                    </select>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -54,11 +83,11 @@
     <div id="contact-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
-            <h2>Contáctanos</h2>
-            <p>Contacta con nosotros a través de los siguientes canales:</p>
+            <h2>Contáctenos</h2>
+            <p>Contáctenos a través de los siguientes canales:</p>
             <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
             <p><a href="https://www.instagram.com/architectural_finesse" target="_blank">Instagram</a></p>
-            <p><a href="mailto:contact@architecturalfinesse.com">Email</a></p>
+            <p><a href="mailto:info@architecturalfinesse.com" target="_blank">Email</a></p>
         </div>
     </div>
 
@@ -66,8 +95,10 @@
         <div class="popup-content">
             <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
             <h2>Catálogos</h2>
-            <p>Nuestros catálogos están disponibles a pedido. Por favor, contáctanos para recibir los catálogos más recientes.</p>
+            <p>Nuestros catálogos están disponibles bajo solicitud. Por favor, contáctenos para recibir los últimos catálogos.</p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
