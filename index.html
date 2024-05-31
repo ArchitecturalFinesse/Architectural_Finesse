@@ -14,16 +14,20 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Architectural Finesse Logo" class="logo">
-        <div class="header-text">
-            <h1>Architectural Finesse</h1>
-            <p>Transformando Espacios con Elegancia y Lujo</p>
-        </div>
+        <img src="logo.png" alt="Logo de Architectural Finesse" class="logo">
+        <h1>Architectural Finesse</h1>
         <div class="language-switcher">
-            <button onclick="setLanguage('es')">Español</button>
-            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('en')">EN</button>
         </div>
     </header>
+    
+    <section class="about-us">
+        <h2 data-lang="about-title">Sobre Nosotros</h2>
+        <p data-lang="about-text1">En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
+        <p data-lang="about-text2">Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.</p>
+        <p data-lang="about-text3">Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.</p>
+    </section>
 
     <div class="container">
         <button class="btn" onclick="openPopup('about-popup')" data-lang="about-us">Sobre Nosotros</button>
@@ -55,10 +59,10 @@
                 <input type="tel" id="phone" name="phone" required>
                 <label for="municipality" data-lang="label-municipality">Municipio:</label>
                 <select id="municipality" name="municipality" required>
-                    <option value="Norte">Norte</option>
-                    <option value="Sur">Sur</option>
-                    <option value="Este">Este</option>
-                    <option value="Oeste">Oeste</option>
+                    <option value="North">North</option>
+                    <option value="South">South</option>
+                    <option value="East">East</option>
+                    <option value="West">West</option>
                 </select>
                 <button type="submit" data-lang="submit">Enviar</button>
             </form>
@@ -70,9 +74,9 @@
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
             <h2 data-lang="contact-title">Contáctenos</h2>
             <p data-lang="contact-text">Contáctenos a través de los siguientes canales:</p>
-            <p><a href="https://wa.me/19393212967" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp" width="20"> WhatsApp</a></p>
-            <p><a href="https://www.instagram.com/architectural_finesse?igsh=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram-icon.png" alt="Instagram" width="20"> Instagram</a></p>
-            <p><a href="mailto:info@architecturalfinesse.com"><img src="images/email-icon.png" alt="Email" width="20"> Correo Electrónico</a></p>
+            <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
+            <p><a href="mailto:info@architecturalfinesse.com" target="_blank">Email</a></p>
         </div>
     </div>
 
