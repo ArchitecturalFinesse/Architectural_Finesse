@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Textura en Paredes</title>
+    <title>Textura en Paredes - Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("yvbeLgm4MGWDlW8Tp"); // Tu Public Key de EmailJS
-        })();
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Textura en Paredes</h1>
-        <button onclick="window.location.href='index.html'">Back</button>
     </header>
     <div class="container">
         <button class="btn" onclick="openPopup('about-popup')">Sobre Nosotros</button>
-        <button class="btn" onclick="openPopup('estimate-popup')">Solicitar Estimado</button>
-        <button class="btn" onclick="openPopup('contact-popup')">Contáctenos</button>
+        <button class="btn" onclick="openPopup('estimate-popup')">Estimado</button>
+        <button class="btn" onclick="openPopup('contact-popup')">Contáctanos</button>
         <button class="btn" onclick="openPopup('catalog-popup')">Catálogos</button>
     </div>
 
-    <!-- Popups -->
     <div id="about-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('about-popup')">&times;</span>
@@ -44,7 +37,7 @@
                 <input type="text" id="name" name="name" required>
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="phone">Número de Teléfono:</label>
+                <label for="phone">Teléfono:</label>
                 <input type="tel" id="phone" name="phone" required>
                 <label for="municipality">Municipio:</label>
                 <select id="municipality" name="municipality" required>
@@ -61,11 +54,11 @@
     <div id="contact-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('contact-popup')">&times;</span>
-            <h2>Contáctenos</h2>
-            <p>Contáctenos a través de los siguientes canales:</p>
-            <p>WhatsApp: <a href="https://wa.me/19393212967" target="_blank">Enlace</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/architectural_finesse" target="_blank">Enlace</a></p>
-            <p>Email: <a href="mailto:info@architecturalfinesse.com">info@architecturalfinesse.com</a></p>
+            <h2>Contáctanos</h2>
+            <p>Contacta con nosotros a través de los siguientes canales:</p>
+            <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse" target="_blank">Instagram</a></p>
+            <p><a href="mailto:contact@architecturalfinesse.com">Email</a></p>
         </div>
     </div>
 
@@ -73,10 +66,8 @@
         <div class="popup-content">
             <span class="close" onclick="closePopup('catalog-popup')">&times;</span>
             <h2>Catálogos</h2>
-            <p>Nuestros catálogos están disponibles bajo solicitud. Por favor, contáctenos para recibir los catálogos más recientes.</p>
+            <p>Nuestros catálogos están disponibles a pedido. Por favor, contáctanos para recibir los catálogos más recientes.</p>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
