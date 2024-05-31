@@ -1,6 +1,6 @@
 function openPopup(id) {
     var popup = document.getElementById(id);
-    popup.style.display = "block";
+    popup.style.display = "flex";
 }
 
 function closePopup(id) {
@@ -17,23 +17,29 @@ function sendEstimate(event) {
     emailjs.sendForm("service_n8ims0n", "template_ho197gd", formData)
         .then(function(response) {
             console.log("Email sent successfully:", response);
-            alert("Your estimate request has been sent successfully!");
-            form.reset(); // Reset the form after submission
-            closePopup("estimate-popup"); // Close the estimate popup after submission
+            alert("¡Tu solicitud de estimado ha sido enviada con éxito!");
+            form.reset(); // Resetea el formulario después del envío
+            closePopup("estimate-popup"); // Cierra el popup después del envío
         }, function(error) {
             console.error("Email sending failed:", error);
-            alert("Oops! Something went wrong. Please try again later.");
+            alert("¡Ups! Algo salió mal. Por favor intenta de nuevo más tarde.");
         });
 }
 
-function switchLanguage(language) {
-    if (language === 'es') {
-        document.getElementById('title').textContent = 'Architectural Finesse';
-        document.getElementById('texture-btn').textContent = 'Textura en Paredes';
-        document.getElementById('ceiling-btn').textContent = 'Stretch Ceiling';
-    } else {
-        document.getElementById('title').textContent = 'Architectural Finesse';
-        document.getElementById('texture-btn').textContent = 'Wall Textures';
-        document.getElementById('ceiling-btn').textContent = 'Stretch Ceiling';
-    }
+function changeLanguage(language) {
+    document.querySelectorAll("[data-lang]").forEach(function(element) {
+        element.style.display = element.getAttribute("data-lang") === language ? "block" : "none";
+    });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("english-btn").addEventListener("click", function() {
+        changeLanguage("en");
+    });
+    document.getElementById("spanish-btn").addEventListener("click", function() {
+        changeLanguage("es");
+    });
+
+    // Set default language
+    changeLanguage("es");
+});
