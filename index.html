@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("yvbeLgm4MGWDlW8Tp"); // Tu Public Key de EmailJS
+        })();
+    </script>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Architectural Finesse</h1>
-        <img src="logo.png" alt="Logo" class="logo">
         <div class="language-switch">
-            <button id="btn-es" onclick="changeLanguage('es')">ES</button>
-            <button id="btn-en" onclick="changeLanguage('en')">EN</button>
+            <button onclick="switchLanguage('es')">ES</button>
+            <button onclick="switchLanguage('en')">EN</button>
         </div>
-    </div>
+    </header>
     <div class="container">
-        <button class="btn large-btn" onclick="window.location.href='textura_paredes.html'">Textura en Paredes</button>
-        <button class="btn large-btn" onclick="window.location.href='stretch_ceiling.html'">Stretch Ceiling</button>
+        <button class="profile-btn" id="texture-btn" onclick="window.location.href='textura_en_paredes.html'">Textura en Paredes</button>
+        <button class="profile-btn" id="ceiling-btn" onclick="window.location.href='stretch_ceiling.html'">Stretch Ceiling</button>
     </div>
 
     <script src="script.js"></script>
