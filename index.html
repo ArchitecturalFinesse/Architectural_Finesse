@@ -14,26 +14,18 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo de Architectural Finesse" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <h1>Architectural Finesse</h1>
-        <div class="language-switcher">
-            <button onclick="setLanguage('es')">ES</button>
-            <button onclick="setLanguage('en')">EN</button>
-        </div>
+        <nav>
+            <button class="lang-btn" onclick="setLanguage('es')">Español</button>
+            <button class="lang-btn" onclick="setLanguage('en')">English</button>
+        </nav>
     </header>
-    
-    <section class="about-us">
-        <h2 data-lang="about-title">Sobre Nosotros</h2>
-        <p data-lang="about-text1">En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.</p>
-        <p data-lang="about-text2">Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.</p>
-        <p data-lang="about-text3">Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.</p>
-    </section>
-
     <div class="container">
-        <button class="btn" onclick="openPopup('about-popup')" data-lang="about-us">Sobre Nosotros</button>
-        <button class="btn" onclick="openPopup('estimate-popup')" data-lang="request-estimate">Solicitar Estimación</button>
-        <button class="btn" onclick="openPopup('contact-popup')" data-lang="contact-us">Contáctenos</button>
-        <button class="btn" onclick="openPopup('catalog-popup')" data-lang="catalog">Catálogo</button>
+        <button class="btn" onclick="openPopup('about-popup')">Sobre Nosotros</button>
+        <button class="btn" onclick="openPopup('estimate-popup')">Solicitar Estimación</button>
+        <button class="btn" onclick="openPopup('contact-popup')">Contáctenos</button>
+        <button class="btn" onclick="openPopup('catalog-popup')">Catálogo</button>
     </div>
 
     <div id="about-popup" class="popup">
@@ -47,7 +39,7 @@
     </div>
 
     <div id="estimate-popup" class="popup">
-        <div class="popup-content">
+        <div class="popup-content large">
             <span class="close" onclick="closePopup('estimate-popup')">&times;</span>
             <h2 data-lang="estimate-title">Solicitar Estimación</h2>
             <form id="estimate-form" onsubmit="sendEstimate(event)">
@@ -59,10 +51,10 @@
                 <input type="tel" id="phone" name="phone" required>
                 <label for="municipality" data-lang="label-municipality">Municipio:</label>
                 <select id="municipality" name="municipality" required>
-                    <option value="North">North</option>
-                    <option value="South">South</option>
-                    <option value="East">East</option>
-                    <option value="West">West</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Sur">Sur</option>
+                    <option value="Este">Este</option>
+                    <option value="Oeste">Oeste</option>
                 </select>
                 <button type="submit" data-lang="submit">Enviar</button>
             </form>
@@ -75,7 +67,7 @@
             <h2 data-lang="contact-title">Contáctenos</h2>
             <p data-lang="contact-text">Contáctenos a través de los siguientes canales:</p>
             <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
-            <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
+            <p><a href="https://www.instagram.com/architectural_finesse?igsh=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
             <p><a href="mailto:info@architecturalfinesse.com" target="_blank">Email</a></p>
         </div>
     </div>
