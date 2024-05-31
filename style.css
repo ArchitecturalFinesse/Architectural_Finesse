@@ -18,20 +18,24 @@ header {
 }
 
 .container {
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
 
 .btn {
-    display: inline-block;
+    display: block;
     background-color: #333;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 20px;
     margin: 10px;
     cursor: pointer;
-    font-size: 16px;
-    width: 200px;
+    font-size: 20px;
+    width: 80%;
+    max-width: 300px;
     transition: background-color 0.3s;
 }
 
@@ -53,9 +57,9 @@ header {
 
 .popup-content {
     background: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     text-align: center;
 }
