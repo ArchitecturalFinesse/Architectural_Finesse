@@ -20,13 +20,27 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-.language-switch button {
+.language-switch {
+    margin-top: 10px;
+}
+
+.language-button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 1em;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+    background-color: #777;
 }
 
 /* Main content styles */
@@ -35,7 +49,8 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 80px; /* To avoid overlap with fixed header */
+    padding-top: 100px; /* To avoid overlap with fixed header */
+    text-align: center;
 }
 
 .main-buttons {
@@ -45,7 +60,7 @@ main {
 }
 
 .large-button {
-    margin: 10px;
+    margin: 20px;
     padding: 20px 40px;
     font-size: 1.5em;
     background-color: #333;
@@ -54,68 +69,9 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 300px;
 }
 
 .large-button:hover {
-    background-color: #555;
-}
-
-/* Popup styles */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-form input, form select, form button {
-    padding: 10px;
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
     background-color: #555;
 }
