@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    margin-top: 50px; /* Para evitar superposición con el botón de volver */
+    margin-bottom: 50px; /* Ajustado para dejar espacio debajo del título */
     text-align: center;
 }
 
@@ -40,15 +40,15 @@ h1 {
 }
 
 .btn {
-    margin: 10px;
-    padding: 15px 30px;
-    font-size: 18px;
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 24px;
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    width: 200px; /* Asegura que los botones sean del mismo tamaño */
+    width: 250px; /* Asegura que los botones sean más grandes */
     text-align: center;
 }
 
