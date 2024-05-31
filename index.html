@@ -5,147 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architectural Finesse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Architectural Finesse" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <h1>Architectural Finesse</h1>
-        <nav>
-            <button class="lang-btn" onclick="setLanguage('es')">Español</button>
-            <button class="lang-btn" onclick="setLanguage('en')">English</button>
-        </nav>
+        <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
     </header>
 
     <div class="profile-container">
-        <div class="profile" onclick="openSection('textures-section')">
-            <h2>Texturas de Paredes</h2>
+        <div class="profile" onclick="window.location.href='textura-paredes.html'">
+            <h2>Textura de Paredes</h2>
         </div>
-        <div class="profile" onclick="openSection('ceilings-section')">
+        <div class="profile" onclick="window.location.href='stretch-ceiling.html'">
             <h2>Stretch Ceiling</h2>
         </div>
     </div>
 
-    <div id="textures-section" class="section">
-        <div class="container">
-            <button class="btn" onclick="openPopup('about-popup-textures')">Sobre Nosotros</button>
-            <button class="btn" onclick="openPopup('estimate-popup-textures')">Solicitar Estimación</button>
-            <button class="btn" onclick="openPopup('contact-popup-textures')">Contáctenos</button>
-            <button class="btn" onclick="openPopup('catalog-popup-textures')">Catálogo</button>
-        </div>
-
-        <div id="about-popup-textures" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('about-popup-textures')">&times;</span>
-                <h2>Sobre Nosotros</h2>
-                <p>En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo...</p>
-                <p>Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario...</p>
-                <p>Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas...</p>
-            </div>
-        </div>
-
-        <div id="estimate-popup-textures" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('estimate-popup-textures')">&times;</span>
-                <h2>Solicitar Estimación</h2>
-                <form id="estimate-form-textures" onsubmit="sendEstimate(event)">
-                    <label for="name-textures">Nombre Completo:</label>
-                    <input type="text" id="name-textures" name="name" required>
-                    <label for="email-textures">Correo Electrónico:</label>
-                    <input type="email" id="email-textures" name="email" required>
-                    <label for="phone-textures">Número de Teléfono:</label>
-                    <input type="tel" id="phone-textures" name="phone" required>
-                    <label for="municipality-textures">Municipio:</label>
-                    <select id="municipality-textures" name="municipality" required>
-                        <option value="Norte">Norte</option>
-                        <option value="Sur">Sur</option>
-                        <option value="Este">Este</option>
-                        <option value="Oeste">Oeste</option>
-                    </select>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-
-        <div id="contact-popup-textures" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('contact-popup-textures')">&times;</span>
-                <h2>Contáctenos</h2>
-                <p>Contáctenos a través de los siguientes canales:</p>
-                <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
-                <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
-                <p><a href="mailto:info@architecturalfinesse.com">Email</a></p>
-            </div>
-        </div>
-
-        <div id="catalog-popup-textures" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('catalog-popup-textures')">&times;</span>
-                <h2>Catálogo</h2>
-                <p>Nuestros catálogos están disponibles a pedido. Por favor contáctenos para recibir los catálogos más recientes.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="ceilings-section" class="section">
-        <div class="container">
-            <button class="btn" onclick="openPopup('about-popup-ceilings')">Sobre Nosotros</button>
-            <button class="btn" onclick="openPopup('estimate-popup-ceilings')">Solicitar Estimación</button>
-            <button class="btn" onclick="openPopup('contact-popup-ceilings')">Contáctenos</button>
-            <button class="btn" onclick="openPopup('catalog-popup-ceilings')">Catálogo</button>
-        </div>
-
-        <div id="about-popup-ceilings" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('about-popup-ceilings')">&times;</span>
-                <h2>Sobre Nosotros</h2>
-                <p>En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo...</p>
-                <p>Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario...</p>
-                <p>Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas...</p>
-            </div>
-        </div>
-
-        <div id="estimate-popup-ceilings" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('estimate-popup-ceilings')">&times;</span>
-                <h2>Solicitar Estimación</h2>
-                <form id="estimate-form-ceilings" onsubmit="sendEstimate(event)">
-                    <label for="name-ceilings">Nombre Completo:</label>
-                    <input type="text" id="name-ceilings" name="name" required>
-                    <label for="email-ceilings">Correo Electrónico:</label>
-                    <input type="email" id="email-ceilings" name="email" required>
-                    <label for="phone-ceilings">Número de Teléfono:</label>
-                    <input type="tel" id="phone-ceilings" name="phone" required>
-                    <label for="municipality-ceilings">Municipio:</label>
-                    <select id="municipality-ceilings" name="municipality" required>
-                        <option value="Norte">Norte</option>
-                        <option value="Sur">Sur</option>
-                        <option value="Este">Este</option>
-                        <option value="Oeste">Oeste</option>
-                    </select>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-
-        <div id="contact-popup-ceilings" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('contact-popup-ceilings')">&times;</span>
-                <h2>Contáctenos</h2>
-                <p>Contáctenos a través de los siguientes canales:</p>
-                <p><a href="https://wa.me/19393212967" target="_blank">WhatsApp</a></p>
-                <p><a href="https://www.instagram.com/architectural_finesse?igshid=MWRvbGwyMnA2Mmd5NQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
-                <p><a href="mailto:info@architecturalfinesse.com">Email</a></p>
-            </div>
-        </div>
-
-        <div id="catalog-popup-ceilings" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('catalog-popup-ceilings')">&times;</span>
-                <h2>Catálogo</h2>
-                <p>Nuestros catálogos están disponibles a pedido. Por favor contáctenos para recibir los catálogos más recientes.</p>
-            </div>
-        </div>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
