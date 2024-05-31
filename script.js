@@ -40,10 +40,6 @@ const translations = {
         'about-text1': 'En Architectural Finesse, nos especializamos en transformar espacios con texturas y acabados que capturan la esencia de la elegancia y el lujo. Nuestro equipo de artesanos visionarios combina una profunda comprensión de la estética arquitectónica con materiales de calidad superior para crear ambientes que inspiran y deleitan.',
         'about-text2': 'Nuestra misión es superar los límites de la excelencia estética, abrazando la innovación creativa y rompiendo con lo ordinario. Nos enorgullece nuestra atención meticulosa a los detalles, nuestro compromiso inquebrantable con la calidad y un portafolio enriquecido con inspiración cultural.',
         'about-text3': 'Bienvenidos a un mundo donde la belleza y la funcionalidad se encuentran, creando espacios que cuentan historias únicas y sofisticadas. En Architectural Finesse, hacemos de cada proyecto una obra maestra.',
-        'about-us': 'Sobre Nosotros',
-        'request-estimate': 'Solicitar Estimación',
-        'contact-us': 'Contáctenos',
-        'catalog': 'Catálogo',
         'estimate-title': 'Solicitar Estimación',
         'label-name': 'Nombre Completo:',
         'label-email': 'Correo Electrónico:',
@@ -58,12 +54,8 @@ const translations = {
     en: {
         'about-title': 'About Us',
         'about-text1': 'At Architectural Finesse, we specialize in transforming spaces with textures and finishes that capture the essence of elegance and luxury. Our team of visionary artisans combines a deep understanding of architectural aesthetics with superior quality materials to create environments that inspire and delight.',
-        'about-text2': 'Our mission is to push the limits of aesthetic excellence, embracing creative innovation and breaking away from the ordinary. We take pride in our meticulous attention to detail, unwavering commitment to quality, and a portfolio enriched with cultural inspiration.',
+        'about-text2': 'Our mission is to push the limits of aesthetic excellence, embracing creative innovation and breaking away from the ordinary. We take pride in our meticulous attention to detail, our unwavering commitment to quality, and a portfolio enriched with cultural inspiration.',
         'about-text3': 'Welcome to a world where beauty and functionality meet, creating spaces that tell unique and sophisticated stories. At Architectural Finesse, we make every project a masterpiece.',
-        'about-us': 'About Us',
-        'request-estimate': 'Request Estimate',
-        'contact-us': 'Contact Us',
-        'catalog': 'Catalog',
         'estimate-title': 'Request Estimate',
         'label-name': 'Full Name:',
         'label-email': 'Email:',
@@ -77,5 +69,5 @@ const translations = {
     }
 };
 
-// Set initial language to Spanish
+// Set initial language
 setLanguage('es');
