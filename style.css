@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, white, black);
+    background: linear-gradient(to right, white, black);
     color: #333;
     margin: 0;
     padding: 0;
@@ -9,12 +9,33 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background: linear-gradient(to right, white, black);
     color: white;
 }
 
 .logo {
     width: 100px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+
+.profile {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.profile:hover {
+    background-color: #555;
 }
 
 .container {
@@ -26,7 +47,6 @@ header {
 }
 
 .btn {
-    display: block;
     background-color: #333;
     color: white;
     border: none;
@@ -64,10 +84,6 @@ header {
     text-align: center;
 }
 
-.popup-content.large {
-    max-width: 800px;
-}
-
 .close {
     position: absolute;
     top: 20px;
@@ -90,4 +106,12 @@ header {
 
 .lang-btn:hover {
     background-color: #555;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
 }
