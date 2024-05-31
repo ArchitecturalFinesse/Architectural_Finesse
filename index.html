@@ -7,22 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
+    <div class="header">
         <h1>Architectural Finesse</h1>
-        <div class="language-switcher">
-            <button class="lang-btn" onclick="setLanguage('es')">ES</button>
-            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="language-switch">
+            <button id="btn-es" onclick="changeLanguage('es')">ES</button>
+            <button id="btn-en" onclick="changeLanguage('en')">EN</button>
         </div>
-    </header>
-
-    <div class="profile-container">
-        <div class="profile" onclick="window.location.href='textura-paredes.html'">
-            <h2>Textura de Paredes</h2>
-        </div>
-        <div class="profile" onclick="window.location.href='stretch-ceiling.html'">
-            <h2>Stretch Ceiling</h2>
-        </div>
+    </div>
+    <div class="container">
+        <button class="btn large-btn" onclick="window.location.href='textura_paredes.html'">Textura en Paredes</button>
+        <button class="btn large-btn" onclick="window.location.href='stretch_ceiling.html'">Stretch Ceiling</button>
     </div>
 
     <script src="script.js"></script>
